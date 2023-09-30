@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if alunos %}
+<div class="container">
+    <div class="row justify-content-center p-5 text-warning">
+        <table class="col-md-4-p3  w-75 ">
+            <tr class="text-center col-md-4 ">
+    
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ação </th>
+            </tr>
+    
+            {% for aluno in alunos %}
+    
+            <tr class="text-center col-md-4 text-light ">
+    
+                    <td>{{aluno.nome}}</td>
+                    <td>{{aluno.email}}</td>
+                    <td><a href="{% url 'aluno' id=aluno.id %}" class="btn btn-dark text-warning">visualizar</a></td>
+            </tr>
+    
+    
+    {% endfor %}
+        </table>
+    
+    </div>
+</div>
+
+
+
+
+{% else %}
+<p>sem alunos para apresentar no momento</p>
+{% endif %}
+
+{% endblock %}

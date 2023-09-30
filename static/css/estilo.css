@@ -1,0 +1,20 @@
+img{
+    width: 170px;
+    border: red;
+    border-radius: 75%;
+}
+
+table{
+    border :1px solid black  ;
+    border-radius: 10px;
+}
+td,th{
+    padding: 19px 0;
+    border :1px solid white  ;
+}
+body{
+    background: linear-gradient(132deg, rgb(0, 0, 0) 0.00%, rgb(36, 83, 255) 100.00%);
+}
+
+
+
